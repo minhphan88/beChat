@@ -1,0 +1,48 @@
+.machine-reply-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.machine-reply {
+  max-width: 60%;
+  padding: 12px 18px;
+  background-color: #e0e0e0;
+  border-radius: 20px 20px 20px 0;
+  font-size: 16px;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.message-header span {
+  margin-right: 5px;
+}
+
+@keyframes dotPulse {
+  0% {
+    content: ".";
+  }
+  25% {
+    content: "..";
+  }
+  50% {
+    content: "...";
+  }
+  75% {
+    content: "..";
+  }
+  100% {
+    content: ".";
+  }
+}
+
+.typing-indicator::before {
+  content: "...";
+  display: inline-block;
+  animation: dotPulse 1s infinite;
+}
